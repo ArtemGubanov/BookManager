@@ -9,6 +9,7 @@ import ru.reksoft.bookmanager.model.Book;
 import java.util.List;
 
 /**
+ * Сервис книги
  * Created by agubanov on 07.06.2017.
  */
 @Service
