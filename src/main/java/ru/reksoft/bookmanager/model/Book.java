@@ -8,12 +8,13 @@ import javax.persistence.*;
  * Created by agubanov on 07.06.2017.
  */
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "BOOKS")
 public class Book {
 
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private int id;
 
     @Column(name = "BOOK_TITLE")
@@ -22,7 +23,7 @@ public class Book {
     @Column(name = "BOOK_AUTHOR")
     private String bookAuthor;
 
-    @Column(name = "BOOK_PRICE")
+    @Column(name = "BOOK_PRICE", nullable = false)
     private int price;
 
     @ManyToOne(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
