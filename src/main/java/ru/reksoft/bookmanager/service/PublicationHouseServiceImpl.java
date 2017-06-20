@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
+ * Сервис издательсвта
  * Created by agubanov on 13.06.2017.
  */
 @Service
